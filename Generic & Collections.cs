@@ -81,7 +81,6 @@ namespace Generic_and_collections
 			s.list.Clear();
 			//Console.WriteLine(s.list.Count);
 
-
 			//dictionary
 			var countOfDict = s.dict.Count;
 			s.dict.Add(7, "Australia");
