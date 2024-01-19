@@ -16,6 +16,13 @@ namespace Generic_and_collections
 		Dictionary<int, string> dict = new Dictionary<int, string>() {
 			{ 1, "Japan"}, { 2, "Malaysia"}, { 3, "Singapore"}, { 4, "Thailand"}, { 5, "Taiwan"}, { 6, "New zealand" }  };
 
+		//Queue
+		Queue<float> queue = new Queue<float>();
+
+		//Stack
+		Stack<int> stack = new Stack<int>();
+
+
 		static void Main(string[] args)
 		{
 			Script s = new Script();
@@ -84,10 +91,42 @@ namespace Generic_and_collections
 			var isExistValue = s.dict.ContainsValue("Hong Kong");
 
 			s.dict.Remove(4);
+			s.dict.Clear();
 
-			foreach (var (i, j) in s.dict) Console.WriteLine(j);
-			foreach (var (i, j) in s.dict) Console.WriteLine(i);
+			//Queue
+			var queue_2 = new Queue<int>(s.arr);
 
+			s.queue.Enqueue(1.0f);
+			s.queue.Enqueue(-1.0f);
+			s.queue.Enqueue(0.5f);
+			s.queue.Enqueue(-0.3f);
+
+			var countOfQueue = s.queue.Count;
+			var isExistQueue = s.queue.Contains(1.0f);
+
+			s.queue.Dequeue();
+
+			var getNum = s.queue.Peek();
+
+			s.queue.Clear();
+
+			float[] floatNumber = s.queue.ToArray();
+
+			//Stack
+			var stack_2 = new Stack<int>(s.arr);
+
+			s.stack.Push(1);
+			s.stack.Push(2);
+			s.stack.Push(3);
+
+			s.stack.Pop();
+
+			var countOfStack = s.stack.Count;
+			var isExistStack = s.stack.Contains(2);
+
+			var getTop = s.stack.Peek();
+
+			//foreach (var i in s.stack) Console.WriteLine(i);
 		}
 
 		string GetListItem(int i, List<string> li) => li[i];
