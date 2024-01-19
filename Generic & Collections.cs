@@ -22,6 +22,8 @@ namespace Generic_and_collections
 		//Stack
 		Stack<int> stack = new Stack<int>();
 
+		ArrayList li = new ArrayList() { 11, 22, 33, 44, 55 };
+
 
 		static void Main(string[] args)
 		{
@@ -46,6 +48,8 @@ namespace Generic_and_collections
 
 			var newGroupItems = new List<string>() { "Miya", "Kaete" };
 			s.list.InsertRange(2, newGroupItems);
+
+			var sub = s.list.GetRange(3, 2);
 
 			var readOnlyList = s.list.AsReadOnly();
 
@@ -125,7 +129,18 @@ namespace Generic_and_collections
 
 			var getTop = s.stack.Peek();
 
-			//foreach (var i in s.stack) Console.WriteLine(i);
+			//ArrayList
+			s.li.Add(66);
+			s.li.AddRange(new ArrayList() { 88, 99 });
+			s.li.Insert(2, 77);
+			s.li.InsertRange(2, new ArrayList() { 111, 222 });
+
+			s.li.Contains(99);
+
+			var subList = s.li.GetRange(5, 2);
+
+			//foreach (var i in sub) Console.WriteLine(i);
+
 		}
 
 		string GetListItem(int i, List<string> li) => li[i];
