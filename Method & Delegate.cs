@@ -85,7 +85,7 @@ namespace Method_and_delegate
 			pub.InvokeEventWithdata(eventArgs);
 
 			//Extension method
-			script.ExtensionMethod("This is an extension method for this class");
+			script.ExtensionMethod("This is an extension method for the Script class");
 		}
 
 		public int GetNumber(out int num)
